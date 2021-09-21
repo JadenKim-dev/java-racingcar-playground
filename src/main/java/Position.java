@@ -2,13 +2,17 @@ import java.util.Objects;
 
 public class Position {
 
+    public static final int MIN_BOUND = 0;
     private int position;
 
     public Position() {
-        this.position = 0;
+        this.position = MIN_BOUND;
     }
 
     public Position(int position) {
+        if(position < MIN_BOUND) {
+            throw new IllegalArgumentException();
+        }
         this.position = position;
     }
 
