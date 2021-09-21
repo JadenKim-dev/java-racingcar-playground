@@ -13,4 +13,13 @@ public class CarTest {
         new Car("12345");
         assertThatThrownBy(() -> new Car("123456")).isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("랜덤한 값에 따라서 전진 여부를 결정하는 로직")
+    void go() {
+        Car car = new Car("test1");
+
+        car.go(() -> true);
+        assertThat(car.getPosition()).isEqualTo(new Position(1));
+    }
 }

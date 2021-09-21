@@ -24,7 +24,7 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
-[] 지정한 이름이 1-5자 사이인지 검증하는 로직(Car)
+[x] 지정한 이름이 1-5자 사이인지 검증하는 로직(Car)
+[x] 랜덤한 값에 따라서 전진 여부를 결정하는 로직(Car)
 [] 차의 이름에 position만큼 '-'를 붙여서 반환하는 로직(Car)
-[] 랜덤한 값에 따라서 전진 여부를 결정하는 로직(Car)
 [] 여러 자동차들 중에서 우승자를 결정하는 로직(Cars)
