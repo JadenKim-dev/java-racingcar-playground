@@ -19,4 +19,9 @@ public class CarDTO {
     public String getPosition() {
         return position;
     }
+
+    @Override
+    public String toString() {
+        return name + " : " + position;
+    }
 }

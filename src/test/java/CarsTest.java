@@ -13,6 +13,6 @@ public class CarsTest {
         Car honux = new Car("honux", 2);
         Cars cars = new Cars(pobi, crong, honux);
 
-        assertThat(cars.getWinner()).containsExactly(crong, honux);
+        assertThat(cars.getWinners()).containsExactly(crong, honux);
     }
 }
