@@ -6,7 +6,7 @@ public class CarDTO {
     private String name;
     private String position;
 
-    public CarDTO(Car car) {
+    private CarDTO(Car car) {
         this.name = car.getName().get();
 
         StringBuilder sb = new StringBuilder();
@@ -14,6 +14,10 @@ public class CarDTO {
             sb.append("-");
         }
         this.position = sb.toString();
+    }
+
+    public static CarDTO from(Car car) {
+        return new CarDTO(car);
     }
 
     public String getName() {

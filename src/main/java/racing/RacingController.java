@@ -19,7 +19,7 @@ public class RacingController {
     public void play() {
         String[] names = InputConverter.splitNames(inputView.inputCarName());
         Car[] carArray = Arrays.stream(names)
-                .map(Car::new).toArray(Car[]::new);
+                .map(Car::of).toArray(Car[]::new);
         Cars cars = new Cars(carArray);
 
         int num = inputView.inputNum();

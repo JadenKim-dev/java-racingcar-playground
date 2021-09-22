@@ -13,7 +13,7 @@ public class CarDTOTest {
     @DisplayName("뷰에 전달할 DTO 생성")
     void create() {
         Car pobi = new Car("pobi", 4);
-        CarDTO carDTO = new CarDTO(pobi);
+        CarDTO carDTO = CarDTO.from(pobi);
 
         Assertions.assertThat(carDTO.getName()).isEqualTo("pobi");
         Assertions.assertThat(carDTO.getPosition()).isEqualTo("----");

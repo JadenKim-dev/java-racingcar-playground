@@ -6,13 +6,17 @@ public class Car {
     private final CarName name;
     private final Position position;
 
-    public Car(String name) {
-        this.name = new CarName(name);
-        this.position = new Position();
+    private Car(String name) {
+        this.name = CarName.of(name);
+        this.position = Position.newInstance();
+    }
+
+    public static Car of(String name) {
+        return new Car(name);
     }
 
     public Car(String name, int position) {
-        this.name = new CarName(name);
+        this.name = CarName.of(name);
         this.position = new Position(position);
     }
 

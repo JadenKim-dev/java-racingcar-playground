@@ -7,8 +7,12 @@ public class Position implements Comparable{
     public static final int MIN_BOUND = 0;
     private int position;
 
-    public Position() {
+    private Position() {
         this.position = MIN_BOUND;
+    }
+
+    public static Position newInstance() {
+        return new Position();
     }
 
     public Position(int position) {

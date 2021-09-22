@@ -3,11 +3,15 @@ package racing.domain;
 public class CarName {
     private final String name;
 
-    public CarName(String name) {
+    private CarName(String name) {
         if(!validateName(name)) {
             throw new IllegalArgumentException();
         }
         this.name = name;
+    }
+
+    public static CarName of(String name) {
+        return new CarName(name);
     }
 
     private boolean validateName(String name) {
