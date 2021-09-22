@@ -11,4 +11,8 @@ public class CarName {
     private boolean validateName(String name) {
         return name.length() > 0 && name.length() <= 5;
     }
+
+    public String get() {
+        return name;
+    }
 }

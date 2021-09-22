@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Random;
 
 public class Car {
@@ -30,5 +31,9 @@ public class Car {
 
     public boolean isPositionSameAs(Position position) {
         return this.position.compareTo(position) == 0;
+    }
+
+    public CarName getName() {
+        return name;
     }
 }

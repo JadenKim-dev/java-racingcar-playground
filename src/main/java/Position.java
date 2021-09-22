@@ -42,4 +42,8 @@ public class Position implements Comparable{
         if(position == position1.position) return 0;
         return 1;
     }
+
+    public int get() {
+        return position;
+    }
 }

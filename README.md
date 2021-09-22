@@ -26,5 +26,5 @@ ex) git checkout -b apply-feedback
 ```
 [x] 지정한 이름이 1-5자 사이인지 검증하는 로직(Car)
 [x] 랜덤한 값에 따라서 전진 여부를 결정하는 로직(Car)
-[] 차의 이름에 position만큼 '-'를 붙여서 반환하는 로직(Car)
 [x] 우승자를 결정하는 로직(Cars)
+[] 뷰에 전달할 DTO 생성 : 차의 이름 + position만큼 '-'를 붙인 문자열
