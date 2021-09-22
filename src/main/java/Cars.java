@@ -9,4 +9,21 @@ public class Cars {
         this.carList = new ArrayList<>();
         carList.addAll(Arrays.asList(cars));
     }
+
+    public List<Car> getWinner() {
+        Position maxPosition = new Position(0);
+        for (Car car : carList) {
+            if(car.isPositionLargerThan(maxPosition)) {
+                maxPosition = car.getPosition();
+            }
+        }
+
+        List<Car> winners = new ArrayList<>();
+        for (Car car : carList) {
+            if(car.isPositionSameAs(maxPosition)) {
+                winners.add(car);
+            }
+        }
+        return winners;
+    }
 }

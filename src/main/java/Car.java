@@ -23,4 +23,12 @@ public class Car {
     public Position getPosition() {
         return position;
     }
+
+    public boolean isPositionLargerThan(Position position) {
+        return this.position.compareTo(position) > 0;
+    }
+
+    public boolean isPositionSameAs(Position position) {
+        return this.position.compareTo(position) == 0;
+    }
 }

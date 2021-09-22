@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Position {
+public class Position implements Comparable{
 
     public static final int MIN_BOUND = 0;
     private int position;
@@ -31,5 +31,15 @@ public class Position {
     @Override
     public int hashCode() {
         return Objects.hash(position);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (this == o) return 0;
+        if (o == null || getClass() != o.getClass()) throw new IllegalArgumentException();
+        Position position1 = (Position) o;
+        if(position < position1.position) return -1;
+        if(position == position1.position) return 0;
+        return 1;
     }
 }
