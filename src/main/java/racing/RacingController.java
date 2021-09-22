@@ -2,9 +2,9 @@ package racing;
 
 import racing.domain.Car;
 import racing.domain.Cars;
-import racing.view.InputConverter;
 import racing.view.InputView;
 import racing.view.ResultView;
+import racing.view.SplitedNames;
 
 import java.util.Arrays;
 
@@ -17,8 +17,8 @@ public class RacingController {
     }
 
     public void play() {
-        String[] names = InputConverter.splitNames(inputView.inputCarName());
-        Car[] carArray = Arrays.stream(names)
+        SplitedNames names = SplitedNames.of(inputView.inputCarName());
+        Car[] carArray = names.stream()
                 .map(Car::of).toArray(Car[]::new);
         Cars cars = new Cars(carArray);
 
