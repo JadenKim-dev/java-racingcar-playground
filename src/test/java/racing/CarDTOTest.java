@@ -1,5 +1,10 @@
+package racing;
+
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import racing.domain.Car;
+import racing.view.CarDTO;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,7 +15,7 @@ public class CarDTOTest {
         Car pobi = new Car("pobi", 4);
         CarDTO carDTO = new CarDTO(pobi);
 
-        assertThat(carDTO.getName()).isEqualTo("pobi");
-        assertThat(carDTO.getPosition()).isEqualTo("----");
+        Assertions.assertThat(carDTO.getName()).isEqualTo("pobi");
+        Assertions.assertThat(carDTO.getPosition()).isEqualTo("----");
     }
 }

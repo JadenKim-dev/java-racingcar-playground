@@ -1,5 +1,6 @@
-import java.util.List;
-import java.util.Random;
+package racing.domain;
+
+import racing.domain.strategy.RacingStrategy;
 
 public class Car {
     private final CarName name;

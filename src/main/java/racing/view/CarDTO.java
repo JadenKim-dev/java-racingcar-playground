@@ -1,3 +1,7 @@
+package racing.view;
+
+import racing.domain.Car;
+
 public class CarDTO {
     private String name;
     private String position;

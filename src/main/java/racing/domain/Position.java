@@ -1,3 +1,5 @@
+package racing.domain;
+
 import java.util.Objects;
 
 public class Position implements Comparable{

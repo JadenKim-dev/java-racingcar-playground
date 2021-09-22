@@ -1,3 +1,5 @@
+package racing.domain.strategy;
+
 import java.util.Random;
 
 public class RacingStrategyImpl implements RacingStrategy{
