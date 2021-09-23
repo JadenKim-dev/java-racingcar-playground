@@ -4,16 +4,11 @@ import racing.domain.Car;
 
 public class CarDTO {
     private String name;
-    private String position;
+    private int position;
 
     private CarDTO(Car car) {
         this.name = car.getName().get();
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < car.getPosition().get(); i++) {
-            sb.append("-");
-        }
-        this.position = sb.toString();
+        this.position = car.getPosition().get();
     }
 
     public static CarDTO from(Car car) {
@@ -24,12 +19,7 @@ public class CarDTO {
         return name;
     }
 
-    public String getPosition() {
+    public int getPosition() {
         return position;
-    }
-
-    @Override
-    public String toString() {
-        return name + " : " + position;
     }
 }
