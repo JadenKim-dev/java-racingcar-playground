@@ -6,8 +6,12 @@ public class InputView {
 
     private final Scanner sc;
 
-    public InputView() {
+    private InputView() {
         this.sc = new Scanner(System.in);
+    }
+
+    public static InputView newInstance() {
+        return new InputView();
     }
 
     public String inputCarName() {

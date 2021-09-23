@@ -1,6 +1,5 @@
 package racing;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racing.domain.Car;
@@ -25,6 +24,6 @@ public class CarTest {
         Car car = Car.of("test1");
 
         car.go(() -> true);
-        Assertions.assertThat(car.getPosition()).isEqualTo(new Position(1));
+        assertThat(car.isPositionSameAs(new Position(1))).isTrue();
     }
 }

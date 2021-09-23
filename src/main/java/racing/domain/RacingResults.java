@@ -2,7 +2,9 @@ package racing.domain;
 
 import racing.view.CarDTO;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class RacingResults {
 
@@ -20,4 +22,10 @@ public class RacingResults {
         RacingResult lastResult = racingResultList.get(racingResultList.size() - 1);
         return lastResult.findCurrentWinners();
     }
+
+    public Iterator<RacingResult> iterator() {
+        return racingResultList.iterator();
+    }
+
+
 }

@@ -4,6 +4,7 @@ import racing.view.CarDTO;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class RacingResult {
     private final List<CarDTO> carDTOList;
@@ -23,5 +24,9 @@ public class RacingResult {
         return carDTOList.stream()
                 .filter(carDTO -> carDTO.isPosition(maxPosition))
                 .collect(Collectors.toList());
+    }
+
+    public Stream<CarDTO> carDTOStream() {
+        return carDTOList.stream();
     }
 }

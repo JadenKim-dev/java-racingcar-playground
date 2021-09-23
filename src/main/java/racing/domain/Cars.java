@@ -1,5 +1,6 @@
 package racing.domain;
 
+import racing.domain.strategy.RacingStrategy;
 import racing.domain.strategy.RacingStrategyImpl;
 
 import java.util.ArrayList;
@@ -32,8 +33,7 @@ public class Cars {
         return winners;
     }
 
-    public void go() {
-        RacingStrategyImpl strategy = new RacingStrategyImpl();
+    public void go(RacingStrategy strategy) {
         for (Car car : carList) {
             car.go(strategy);
         }
